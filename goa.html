@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="STYLE.CSS" />
+    <style>
+      /* Full-screen video */
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures video covers the screen */
+        z-index: -1; /* Ensures the video is in the background */
+      }
+
+      /* Reducing the opacity of both navbars further */
+      .navbar {
+        opacity: 0.3; /* Reduced opacity to 50% */
+      }
+
+      /* Reducing the size of the carousel */
+      #carouselExampleDark {
+        max-height: 100px; /* Reduce the height of the carousel further */
+        width: 50%; /* Reduce the width of the carousel */
+        margin: 50px auto; /* Centers the carousel */
+        opacity: 0.8;
+        border-radius: 20px;
+      }
+
+      /* Reducing opacity of carousel images */
+      .carousel-inner img {
+        height: 100%; /* Ensure the images are sized to fit the reduced carousel size */
+        object-fit: cover;
+        opacity: 0.5; /* Reduced opacity to 50% */
+        border-radius: 20px;
+        transition: opacity 0.5s ease; /* Smooth transition for opacity */
+      }
+
+      /* Optionally, restore opacity on hover or active slide */
+      .carousel-item.active img {
+        opacity: 1; /* Full opacity on the active image */
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2017/06/13/9888-221477094_large.mp4" type="video/mp4">
+   </video>
+    
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="tour.html"><strong>INDIAN TOURISM</strong></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="tour2.html">EXPLORE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">LOGOUT</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">image</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://www.thegoavilla.com/static/pub/image/CID_0538_540e2897a539b33077f2dad6a65623de.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4 class="home">GOA</h4>
+              <p class="home">ONE STATE MANY WORLD</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://www.revv.co.in/blogs/wp-content/uploads/2020/07/Reis-Magos-Fort-in-Goa.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4 class="home">AGODA FORT</h4>
+              <p class="home">Agoda Fort, located in Goa, is a historic coastal fort built by the Portuguese in the 16th century. It offers panoramic views of the Arabian Sea and the surrounding landscape. The fort is known for its well-preserved structure, including its watchtowers and walls. Today, it is a popular tourist destination, offering a glimpse into Goa's colonial past.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/originals/95/18/a2/9518a242d26c8d4d196c62d0251c6ddc.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4 class="home">ANJUNA BEACH</h4>
+              <p class="home">Anjuna Beach, located in Goa, is famous for its vibrant nightlife and scenic beauty. It is known for its soft, golden sand, crystal-clear waters, and palm-lined shores. The beach attracts visitors with its lively flea markets, beach parties, and water sports activities. Anjuna also has a rich history, once being a hub for hippies in the 1960s and 1970s.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
